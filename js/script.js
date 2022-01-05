@@ -1,5 +1,6 @@
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
+
 buttons.forEach(button => {
     button.addEventListener("click",() =>{
         const offset = button.dataset.carouselButton === "next" ? 1 : -1
@@ -14,12 +15,13 @@ buttons.forEach(button => {
         let nextIndex = [...slides.children].indexOf(nextSlide) + offset
 
         if(prevIndex < 0 ) prevIndex = slides.children.length -1
-        if(prevIndex >= slides.children.lenght) prevIndex = 0
+        if(prevIndex >= slides.children.length) prevIndex = 0
 
         if(nextIndex < 0 ) nextIndex = slides.children.length -1
-        if(nextIndex >= slides.children.lenght) nextIndex = 0
+        if(nextIndex >= slides.children.length) nextIndex = 0
 
-
+        if(newIndex < 0 ) newIndex = slides.children.length -1
+        if(newIndex >= slides.children.length) newIndex = 0
 
         slides.children[newIndex].dataset.active = true
         delete activeSlide.dataset.active
