@@ -1,0 +1,357 @@
+body {
+  margin: 0px;
+  width: 100%;
+
+}
+header {
+  width: 88%;
+  background-color: black;
+  color: greenyellow;
+  font-family: sans-serif;
+  height: 50px;
+  padding: 2%;
+  padding-left: 10%;
+}
+
+.left_header_text {
+  float: left;
+  font-size: 160%;
+  font-weight: bold;
+}
+
+.right_header_text {
+  font-size: 170%;
+  float: right;
+  padding-right: 7%;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+  margin-top: 0.1vw;
+}
+.left_header_text > span {
+  font-size: 150%;
+}
+.right_header_text > span {
+  color: white;
+  font-size: 110%;
+}
+
+.home_page {
+  margin-top: 0px;
+  width: 100%;
+  height: 75vh;
+  background-image: url(/images/interior_design2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home_page::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 75vh;
+}
+.homepage_text_heading {
+  position: relative;
+  top: 24%;
+  left: 24%;
+  font-family: sans-serif;
+  font-size: 350%;
+  color: white;
+}
+
+.homepage_text_heading > span {
+  font-weight: bold;
+}
+
+.homepage_sub_text {
+  position: relative;
+  top: 25%;
+  left: 24%;
+  color: white;
+  opacity: 1.5;
+}
+.button {
+  position: relative;
+  top: 30%;
+  left: 24%;
+  border: none;
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 130%;
+  margin: 4px 2px;
+  height: 8%;
+  cursor: pointer;
+}
+
+.cardview_container {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  justify-items: center;
+  margin: 2rem auto;
+  top: -90px;
+  margin-bottom: -50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  margin: 10px;
+  padding: 0px;
+  border-style:solid ;
+  border-width:2px;
+  border-color: rgb(207, 201, 201);
+  padding-bottom: 15px;
+}
+
+.cardview_readmore_link{
+    display:block;
+    text-align: right;
+    color: rgb(121, 167, 52);
+}
+.column > h3,p,a{
+    padding: 10px;
+} 
+
+
+
+.welcome {
+    background-color: black;
+    width: 100%;
+    height: 50% ;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    height: 35rem;
+}
+
+
+#wel_img{
+    float: left;
+} 
+#wel_img > img{
+    height: 35rem;
+    width: 100%;
+}
+
+#wel_txt{
+    float:left;
+    width: 50%;
+    padding: 15pt;
+}
+
+#wel_txt > h1{
+    color: greenyellow;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 250%;
+}
+#wel_txt > p{
+    color: white;
+}
+#wel_txt > button{
+    border: none;
+    background-color: greenyellow;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 140%;
+    margin: 20px 2px;
+    height: 15%;
+    width: 40%;
+    cursor: pointer;
+}
+
+
+.collections > h1{
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 35px;
+
+}
+.carousel{
+    position: relative;
+    width: 700px;
+    height: 500px;
+    border: none;
+    margin: 30px auto 0;
+
+}
+
+
+
+.carousel-button{
+    position: absolute;
+    z-index: 2;
+    background-color: greenyellow;
+    border: none;
+    font-size: 3rem;
+    border-radius: 5px;
+    top: 75%;
+    cursor: pointer;
+    padding: 0 .5rem;
+}
+.carousel-button:active{
+    background-color: rgb(75, 74, 74);
+}
+.carousel-button.prev{
+    left: 18rem;
+}
+.carousel-button.next{
+    left: 23rem;
+}
+
+.carousel > ul{
+    list-style: none;
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel > ul > li {
+    overflow: hidden;
+    position: absolute;
+    left: 500px;
+    top: 247px;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.slide[data-active]{
+    z-index:2;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -0.1rem;
+    left: 12rem;
+       
+}
+
+.slide[data-prev]{
+    z-index:1;
+    position: absolute;
+     width: 275px;
+    height: 275px;
+    left: -7rem;
+    top : 1rem;
+}
+
+.slide[data-next]{
+    z-index:1;
+    position: absolute;
+     width: 275px;
+    height: 275px;
+    left: 32.6rem;
+    top : 1rem;
+
+}
+
+.slide > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+
+
+
+
+#hire_me_form_container {
+  background-color: black;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.form_content {
+  position: relative;
+  top: 10%;
+}
+.form_title {
+  color: greenyellow;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 250%;
+}
+#hire_me_form {
+  display: inline-block;
+}
+
+.left {
+  float: left;
+  margin: 10px;
+}
+.clear {
+  clear: both;
+}
+
+#full_name,
+#email_adress,
+#phone_number {
+  height: 6vh;
+  font-size: 10pt;
+}
+#message {
+  height: 15vh;
+}
+
+.submit_button {
+  border: none;
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 130%;
+  margin: 4px 2px;
+  height: 8%;
+  width: 25%;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  background-color: rgb(61, 60, 60);
+  width: auto;
+  height: 8vh;
+  padding: 1%;
+  color: white;
+  font-family: sans-serif;
+}
+.left_footer_text {
+  float: left;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+.right_footer_text {
+  float: right;
+  padding-right: 7%;
+}
+.right_footer_text > p > span {
+  font-weight: bold;
+  font-size: 25px;
+}
