@@ -1,8 +1,10 @@
+
 body {
   margin: 0px;
   width: 100%;
-
+  overflow-x: hidden;
 }
+
 header {
   width: 88%;
   background-color: black;
@@ -83,21 +85,28 @@ header {
   padding: 15px 20px;
   text-align: center;
   font-weight: bold;
-  display: inline-block;
   font-size: 130%;
   margin: 4px 2px;
-  height: 8%;
+  height: 7vh;
   cursor: pointer;
 }
+.button:hover{
+  background-color: rgb(107, 173, 6);
+}
+.button:active{
+  background-color:rgb(46, 44, 44);
+}
+
 
 .cardview_container {
   position: relative;
   display: inline-block;
-  width: 60%;
+  width: 1100px;
+  height: 540px;
   justify-items: center;
   margin: 2rem auto;
   top: -90px;
-  margin-bottom: -50px;
+  margin-bottom: -7rem;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -106,12 +115,17 @@ header {
 .column {
   float: left;
   width: 30%;
+  height: auto;
   margin: 10px;
   padding: 0px;
   border-style:solid ;
   border-width:2px;
   border-color: rgb(207, 201, 201);
   padding-bottom: 15px;
+}
+.column > img{
+  width: 100%;
+  height: 250px;
 }
 
 .cardview_readmore_link{
@@ -120,35 +134,34 @@ header {
     color: rgb(121, 167, 52);
 }
 .column > h3,p,a{
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 } 
+.column > p{
+  text-align: justify;
+  font-size: 15px;
+}
 
 
 
-.welcome {
+.grid-container{
     background-color: black;
     width: 100%;
-    height: 50% ;
-}
-.grid-container{
     display:grid;
     grid-template-columns:1fr 1fr;
-    height: 35rem;
+    height: auto;
 }
-
-
-#wel_img{
-    float: left;
-} 
 #wel_img > img{
-    height: 35rem;
+    height: 100%;
     width: 100%;
+    padding: 0;
+    content: url(/images/interior_design.jpg);
 }
 
 #wel_txt{
-    float:left;
-    width: 50%;
-    padding: 15pt;
+    width: 55%;
+    text-align:left;
+    padding: 15px;
 }
 
 #wel_txt > h1{
@@ -159,6 +172,8 @@ header {
 }
 #wel_txt > p{
     color: white;
+    font-family: sans-serif;
+
 }
 #wel_txt > button{
     border: none;
@@ -173,6 +188,12 @@ header {
     height: 15%;
     width: 40%;
     cursor: pointer;
+}
+#wel_txt > button:hover{
+  background-color: rgb(107, 173, 6);
+}
+#wel_txt > button:active{
+  background-color:rgb(46, 44, 44);
 }
 
 
@@ -192,8 +213,6 @@ header {
     margin: 30px auto 0;
 
 }
-
-
 
 .carousel-button{
     position: absolute;
@@ -243,13 +262,12 @@ header {
     height: 300px;
     top: -0.1rem;
     left: 12rem;
-       
 }
 
 .slide[data-prev]{
     z-index:1;
     position: absolute;
-     width: 275px;
+    width: 275px;
     height: 275px;
     left: -7rem;
     top : 1rem;
@@ -258,7 +276,7 @@ header {
 .slide[data-next]{
     z-index:1;
     position: absolute;
-     width: 275px;
+    width: 275px;
     height: 275px;
     left: 32.6rem;
     top : 1rem;
@@ -272,10 +290,6 @@ header {
     object-fit: cover;
     background-position: center;
 }
-
-
-
-
 
 #hire_me_form_container {
   background-color: black;
@@ -299,7 +313,6 @@ header {
 #hire_me_form {
   display: inline-block;
 }
-
 .left {
   float: left;
   margin: 10px;
@@ -332,6 +345,12 @@ header {
   width: 25%;
   cursor: pointer;
 }
+.submit_button:hover{
+  background-color: rgb(107, 173, 6);
+}
+.submit_button:active{
+  background-color:rgb(46, 44, 44);
+}
 
 footer {
   position: relative;
@@ -355,3 +374,171 @@ footer {
   font-weight: bold;
   font-size: 25px;
 }
+
+
+/* responsive media properties */
+
+@media screen and (max-width: 1200px){
+  
+  header{
+    width: 92%;
+    height: 40px;
+    padding-left: 7%;
+  }
+
+  .left_header_text{
+    font-size: 140%;
+  }
+
+  .right_header_text{
+    font-size: 140%;
+  }
+
+  .home_page{
+    width: 100%;
+    height: 67vh;
+  }
+  .home_page::before{
+    height: 67vh;
+  }
+  .homepage_text_heading{
+    font-size: 270%;
+    top: 22%;
+    left: 21%;
+  }
+  .homepage_sub_text{
+    top: 23%;
+    left: 21%;
+  }
+  .button{
+    left: 21%;
+    top: 26%;
+    font-size: 110%;
+    padding: 7px 15px;
+    height: 3rem;
+  }
+
+  .cardview_container{
+    width: 850px;
+    height: 470px;
+    margin: 1.5rem auto;
+    top: -70px;
+    margin-bottom: -3.5rem;
+  }
+  .column{
+    width: 30%;
+    height: 420px;
+    margin: 8px;
+    padding-bottom: 10px;
+  }
+  .column>img{
+    width: 100%;
+    height: 210px;
+    src: local()
+  }
+  .column> p{
+    font-size: 14px;
+  }
+
+  .grid-container{
+    width: 100%;
+    height: 430px;
+  }
+  #wel_img> img{
+    height: 430px;
+    width: 100%;
+    content: url(/images/interior_design3.jpg);
+  }
+  #wel_txt{
+    width: 70%;
+    padding: 8px;
+  }
+  #wel_txt > h1{
+    font-size: 200%;
+  }
+  #wel_txt > p{
+    font-size: 14px;
+  }
+  #wel_txt> button{
+    padding: 7px 10px;
+    font-size: 110%;
+    width: 50%;
+    height: 14%;
+  }
+
+  .carousel{
+    width: 500px;
+    height: 350px;
+    margin: 20px auto 0;
+  }
+  .carousel-button{
+    font-size: 2rem;
+    top: 80%;
+  }
+  .carousel-button.prev{
+    left: 13.5rem;
+  }
+  .carousel-button.next{
+    left: 17.5rem;
+  }
+  .carousel > ul{
+    width: 300px;
+    height: 250px;
+  }
+  .carousel> ul> li{
+    left: 300px;
+    top: 220px;
+  }
+  .slide[data-active]{
+    width: 250px;
+    height: 250px;
+    left: 9rem;
+  }
+  .slide[data-prev]{
+    width: 225px;
+    height: 225px;
+    left: -6.9rem;
+  }
+  .slide[data-next]{
+    width: 225px;
+    height: 225px;
+    left: 26.3rem;
+  }
+  
+  #hire_me_form_container{
+    height: 47vh;
+  }
+  .form_content{
+    top: 7%;
+  }
+  .form_title{
+    font-size: 200%;
+  }
+  #full_name, #email_adress, #phone_number{
+    height: 4vh;
+    width: 20vh;
+  }
+  #message{
+    height: 12vh;
+    width: 67vh;
+  }
+  .submit_button{
+    padding: 10px 15px;
+    font-size: 115%;
+    width: 22%;
+  }
+
+  .left_footer_text{
+    margin-left: 6%;
+    margin-top: 1.9%;
+  }
+
+  .right_footer_text> p > span{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px){
+
+}
+  
